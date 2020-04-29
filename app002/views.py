@@ -38,12 +38,15 @@ class Logins(APIView):
 
 def ceshi(request):
     # ipdb.set_trace()
+    # cc =Category.objects.all().order_by('-id')
     data = {
         'patient_name': '张三',
         'age': '2265166656565',
         'patient_id': '19000347',
         '诊断': '此处返回app002222 的那内容',
+        # "cc":cc,
     }
+
 
     print('data,data', data)
     data2 = [data] * 100000

@@ -22,6 +22,7 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all().order_by('date_joined')
     serializer_class = UserSerializer
 
+
 class GroupViewSet(viewsets.ModelViewSet):
     """
     允许组查看或编辑的API路径。
@@ -61,4 +62,7 @@ def inserts(request):
 def do_research(request):
     lists = Student.objects.all()
     return render(request,'app003/t1.html',{"li":lists})
+
+
+
 

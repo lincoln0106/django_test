@@ -35,7 +35,9 @@ INSTALLED_APPS = [
     # 后台UI 设置
     "simpleui",
     'django.contrib.admin',
+    #包含身份认证 ( authentication ) 框架的核心，以及它的默认模型。
     'django.contrib.auth',
+    #是 Django 内容类型系统，它允许权限与您创建的模型相关联。
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -81,10 +83,12 @@ REST_FRAMEWORK = {
 }
 # 中间件的设置
 MIDDLEWARE = [
+    #管理跨请求的会话。
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    #使用会话将用户与请求相关联。
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
